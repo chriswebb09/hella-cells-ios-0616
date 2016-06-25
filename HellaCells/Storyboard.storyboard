@@ -61,10 +61,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igh-eV-ww5">
-                                <rect key="frame" x="102" y="230" width="116" height="87"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igh-eV-ww5">
+                                <rect key="frame" x="50" y="230" width="221" height="155"/>
                                 <accessibility key="accessibilityConfiguration" label="bigNumber"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,6 +72,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6cm-Eq-MyR"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="igh-eV-ww5" id="PIR-3e-4i0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXc-Co-QUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

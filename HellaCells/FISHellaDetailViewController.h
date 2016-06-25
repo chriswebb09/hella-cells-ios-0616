@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FISHellaDetailViewController : UIViewController
+//@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+//
+@property (nonatomic) NSString *displayNumber;
 
 @end

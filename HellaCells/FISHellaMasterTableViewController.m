@@ -10,6 +10,15 @@
 
 @implementation FISHellaMasterTableViewController
 
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tableView.accessibilityLabel = @"Table";
+    self.tableView.accessibilityIdentifier=@"Table";
+    
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -28,6 +37,14 @@
     // Configure the cell...
     
     return cell;
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    FISHellaDetailViewController *detailVC= (FISHellaDetailViewController *)segue.destinationViewController;
+
+    UITableViewCell *selectedCell = (UITableViewCell *)sender;
+    detailVC.displayNumber = selectedCell.textLabel.text;
 }
 
 
@@ -73,20 +90,20 @@
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }
- */
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tableView.accessibilityElementsHidden = NO;
-    self.tableView.accessibilityIdentifier = @"Table";
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+// */
+//
+//
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+//    self.view.accessibilityIdentifier = @"Table";
+//    
+//    // Uncomment the following line to preserve selection between presentations.
+//    // self.clearsSelectionOnViewWillAppear = NO;
+//    
+//    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
